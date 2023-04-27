@@ -46,7 +46,7 @@ export const  Signup=()=> {
     }
     return (
         <Box shadow={"lg"} w="fit-content" p={"3%"} m="auto" mt={"20vh"} borderRadius={10} display={"flex"} flexDir="column" alignItems="center" justifyContent={"center"} gap={5}>
-            Signup
+            <p style={{fontWeight:"bolder", fontSize:"30px"}}>Create a new account <br /><span style={{fontWeight:"normal", fontSize:"25px"}}>It's quick and easy.</span></p>
             <InputGroup size='md'>
                 <Input placeholder='Enter Name' onChange={(e) => setName(e.target.value)} />
             </InputGroup>
@@ -72,8 +72,8 @@ export const  Signup=()=> {
                 submit
             </Button>
             <Box>
-                Already have account ?
-
+           
+                <p style={{fontWeight:"bold", fontSize:"28px"}}>  Already have account ?<br /></p>
             </Box>
             <Box color={"blue"} >
 

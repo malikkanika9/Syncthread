@@ -57,8 +57,7 @@ export const  Login=()=>{
     return (
 
         <Box shadow={"lg"} w="fit-content" p={"3%"} m="auto" mt={"20vh"} borderRadius={10} display={"flex"} flexDir="column" alignItems="center" justifyContent={"center"} gap={5}>
-            Login
-
+           <p style={{fontWeight:"bolder", fontSize:"30px"}}>Login to your account </p>
             <InputGroup size='md'>
                 <Input placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} />
             </InputGroup>
@@ -80,7 +79,8 @@ export const  Login=()=>{
                 submit
             </Button>
             <Box>
-             New User ? Create New Account
+            <p style={{fontWeight:"bold", fontSize:"25px"}}> New User ? Create New Account </p>
+            
             </Box>
             <Box color={"blue"}>
 

@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { VscAccount } from "react-icons/vsc";
+import { AiOutlineLogout } from "react-icons/ai";
 
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -54,16 +54,8 @@ export const Navbar = () => {
             <Link to={"/signup"}>SignUp</Link>
           </Box>
         ) : (
-          <Menu>
-            <MenuButton
-              as={IconButton}
-              aria-label="Options"
-              icon={<VscAccount />}
-            />
-            <MenuList>
-              <MenuItem onClick={() => logOut()}>Logout</MenuItem>
-            </MenuList>
-          </Menu>
+          
+          <AiOutlineLogout cursor={"pointer"} onClick={() => logOut()}>Logout</AiOutlineLogout>
         )}
       </Flex>
 
@@ -85,15 +77,15 @@ export const Navbar = () => {
               <Link to={"/map"}>Maps</Link>
             </Box>
           </MenuItem>
-          <MenuItem>
+      
             {!Token ? (
-              <Box>
+                  <MenuItem>
                 <Link to={"/signup"}>SignUp</Link>
-              </Box>
+                </MenuItem>
             ) : (
-              <Box onClick={() => logOut()}>Logout</Box>
+              <AiOutlineLogout onClick={() => logOut()}>Logout</AiOutlineLogout>
             )}
-          </MenuItem>
+       
         </MenuList>
       </Menu>
     </Flex>
