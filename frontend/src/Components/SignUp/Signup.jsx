@@ -26,8 +26,8 @@ export const  Signup=()=> {
                     description: res.data.msg,
                     status: "success",
                     isClosable: true,
-                    duration: 9000,
-                    position: "top"
+                    duration: 5000,
+                    position: "top-right"
                 })
                 navigate("/login", { state: location.state })
             }).catch((er) => {
@@ -39,8 +39,8 @@ export const  Signup=()=> {
                 description: "all fields required",
                 status: "error",
                 isClosable: true,
-                duration: 9000,
-                position: "top"
+                duration: 5000,
+                position: "top-right"
             })
         }
     }

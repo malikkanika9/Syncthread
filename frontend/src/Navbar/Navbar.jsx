@@ -27,7 +27,14 @@ export const Navbar = () => {
     >
       <Box w={{ sm: "15%", md: "10%", lg: "5%" }} h={"100%"} p={2}>
         <Link to={"/"}>
-          <Image w={"100%"} h={"100%"} src="./home-page.png" marginTop={"15px"} width="30px" height="30px"/>
+          <Image
+            w={"100%"}
+            h={"100%"}
+            src="./home-page.png"
+            marginTop={"15px"}
+            width="30px"
+            height="30px"
+          />
         </Link>
       </Box>
       <Flex
@@ -35,8 +42,7 @@ export const Navbar = () => {
         align={"center"}
         justifyContent="space-evenly"
         width={"70%"}
-        fontSize={["10px", "14px", "16px", "16px"]}
-        color="teal.900"
+        fontSize={"16px"}
         fontWeight={500}
       >
         <Box>
@@ -51,13 +57,13 @@ export const Navbar = () => {
             <Link to={"/signup"}>SignUp</Link>
           </Box>
         ) : (
-          
-          <AiOutlineLogout cursor={"pointer"} onClick={() => logOut()}>Logout</AiOutlineLogout>
+          <AiOutlineLogout cursor={"pointer"} onClick={() => logOut()}>
+            Logout
+          </AiOutlineLogout>
         )}
       </Flex>
 
       <Menu>
-        
         <MenuList zIndex={700}>
           <MenuItem>
             <Box>
@@ -69,15 +75,14 @@ export const Navbar = () => {
               <Link to={"/map"}>Maps</Link>
             </Box>
           </MenuItem>
-      
-            {!Token ? (
-                  <MenuItem>
-                <Link to={"/signup"}>SignUp</Link>
-                </MenuItem>
-            ) : (
-              <AiOutlineLogout onClick={() => logOut()}>Logout</AiOutlineLogout>
-            )}
-       
+
+          {!Token ? (
+            <MenuItem>
+              <Link to={"/signup"}>SignUp</Link>
+            </MenuItem>
+          ) : (
+            <AiOutlineLogout onClick={() => logOut()}>Logout</AiOutlineLogout>
+          )}
         </MenuList>
       </Menu>
     </Flex>

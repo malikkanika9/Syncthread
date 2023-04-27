@@ -10,7 +10,7 @@ export const  Dashboard=()=> {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     let navigate = useNavigate()
-    let isToken = localStorage.getItem("token")
+    let Token = localStorage.getItem("token")
     let handleNavigation = (url) => {
         navigate("/map", { state: url })
     }
@@ -32,7 +32,7 @@ export const  Dashboard=()=> {
     }, [])
 
     useEffect(() => {
-        if (!isToken) {
+        if (!Token) {
 
             onOpen()
         }
@@ -58,7 +58,6 @@ export const  Dashboard=()=> {
 
             </Box>
             <>
-                {/* when user not logged in */}
 
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
