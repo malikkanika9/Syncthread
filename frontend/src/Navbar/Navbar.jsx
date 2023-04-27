@@ -11,9 +11,6 @@ import {
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineLogout } from "react-icons/ai";
-
-import { HamburgerIcon } from "@chakra-ui/icons";
-
 export const Navbar = () => {
   let navigate = useNavigate();
   let Token = localStorage.getItem("token");
@@ -30,7 +27,7 @@ export const Navbar = () => {
     >
       <Box w={{ sm: "15%", md: "10%", lg: "5%" }} h={"100%"} p={2}>
         <Link to={"/"}>
-          <Image w={"100%"} h={"100%"} src="./home-page.png" />
+          <Image w={"100%"} h={"100%"} src="./home-page.png" marginTop={"15px"} width="30px" height="30px"/>
         </Link>
       </Box>
       <Flex
@@ -60,12 +57,7 @@ export const Navbar = () => {
       </Flex>
 
       <Menu>
-        <MenuButton
-          as={IconButton}
-          aria-label="Options"
-          icon={<HamburgerIcon />}
-          display={["flex", "flex", "flex", "none"]}
-        />
+        
         <MenuList zIndex={700}>
           <MenuItem>
             <Box>

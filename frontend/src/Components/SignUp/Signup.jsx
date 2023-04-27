@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Button, Input, InputGroup, InputRightElement, useToast } from '@chakra-ui/react'
+import { Box, Button, Input, InputGroup, InputRightElement, color, useToast } from '@chakra-ui/react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { ViewIcon } from "@chakra-ui/icons"
 import axios from 'axios'
@@ -46,7 +46,7 @@ export const  Signup=()=> {
     }
     return (
         <Box shadow={"lg"} w="fit-content" p={"3%"} m="auto" mt={"20vh"} borderRadius={10} display={"flex"} flexDir="column" alignItems="center" justifyContent={"center"} gap={5}>
-            <p style={{fontWeight:"bolder", fontSize:"30px"}}>Create a new account <br /><span style={{fontWeight:"normal", fontSize:"25px"}}>It's quick and easy.</span></p>
+            <p style={{fontWeight:"bolder", fontSize:"30px",color:"#4267b2"}}>Create a new account <br /><span style={{fontWeight:"normal", fontSize:"20px", color:"black"}}>It's quick and easy.</span></p>
             <InputGroup size='md'>
                 <Input placeholder='Enter Name' onChange={(e) => setName(e.target.value)} />
             </InputGroup>
@@ -68,16 +68,16 @@ export const  Signup=()=> {
                 </InputRightElement>
             </InputGroup>
 
-            <Button onClick={handleForm} colorScheme={"blue"}>
+            <Button onClick={handleForm} colorScheme={"green"}>
                 submit
             </Button>
             <Box>
            
-                <p style={{fontWeight:"bold", fontSize:"28px"}}>  Already have account ?<br /></p>
+                <p style={{fontWeight:"bold", fontSize:"20px"}}>  Already have account ? Please Login <br /></p>
             </Box>
             <Box color={"blue"} >
 
-                <Link to={"/login"} >
+                <Link to={"/login"} style={{color:"#1877f2", fontSize:"17px" }}>
                     Login
                 </Link>
             </Box>

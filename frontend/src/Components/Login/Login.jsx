@@ -57,7 +57,7 @@ export const  Login=()=>{
     return (
 
         <Box shadow={"lg"} w="fit-content" p={"3%"} m="auto" mt={"20vh"} borderRadius={10} display={"flex"} flexDir="column" alignItems="center" justifyContent={"center"} gap={5}>
-           <p style={{fontWeight:"bolder", fontSize:"30px"}}>Login to your account </p>
+           <p style={{fontWeight:"bolder", fontSize:"30px", color:"#4267b2"}}>Login to your account </p>
             <InputGroup size='md'>
                 <Input placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} />
             </InputGroup>
@@ -75,16 +75,16 @@ export const  Login=()=>{
                 </InputRightElement>
             </InputGroup>
 
-            <Button onClick={handleForm} colorScheme={"blue"}>
+            <Button onClick={handleForm} colorScheme={"green"}>
                 submit
             </Button>
             <Box>
-            <p style={{fontWeight:"bold", fontSize:"25px"}}> New User ? Create New Account </p>
+            <p style={{fontWeight:"bold", fontSize:"20px"}}> New User ? Create New Account </p>
             
             </Box>
             <Box color={"blue"}>
 
-                <Link to={"/signup"} >
+                <Link to={"/signup"}  style={{color:"#1877f2", fontSize:"17px"}} >
                     SignUp
                 </Link>
             </Box>

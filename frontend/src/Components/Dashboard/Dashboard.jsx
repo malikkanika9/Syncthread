@@ -64,7 +64,8 @@ export const  Dashboard=()=> {
                     <ModalOverlay />
                     <ModalContent>
                         <ModalBody textAlign={"center"}>
-                            User not logged in
+                        <p style={{fontWeight:"bold", fontSize:"20px"}}>You are not logged in. Kindly login to see the Dashboard </p>
+          
                         </ModalBody>
                         <ModalFooter color={"blue"} m="auto">
                             <Link to={"/login"}>
