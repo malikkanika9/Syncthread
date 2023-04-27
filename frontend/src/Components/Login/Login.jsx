@@ -25,8 +25,9 @@ export const Login = () => {
     let payload = { email, password };
     if (email && password) {
       axios
-        .post(`https://grumpy-clam-nightgown.cyclic.app/user/login`, payload)
+        .post(`http://localhost:8080/api/v1/user/login`, payload)
         .then((res) => {
+
           localStorage.setItem("token", res.data.token);
           navigate("/dashboard");
           window.location.reload();
@@ -39,7 +40,7 @@ export const Login = () => {
           });
         })
         .catch((er) => {
-          console.log(er);
+          console.log("er line 43==========>",er);
           toast({
             description: "User not found",
             status: "error",

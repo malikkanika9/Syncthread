@@ -20,7 +20,7 @@ export const  Signup=()=> {
         let payload = { name, email, password }
         if (name && email && password) {
 
-            axios.post(`https://grumpy-clam-nightgown.cyclic.app/user/signup`, payload).then((res) => {
+            axios.post(`http://localhost:8080/api/v1/user/signup`, payload).then((res) => {
                 console.log(res.data.msg)
                 toast({
                     description: res.data.msg,

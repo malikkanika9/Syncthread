@@ -4,13 +4,13 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-export const  Dashboard=()=> {
+export const Dashboard=()=> {
     let toast = useToast()
     let [maps, setMaps] = useState([])
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     let navigate = useNavigate()
-    let Token = localStorage.getItem("token")
+    let isToken = localStorage.getItem("token")
     let handleNavigation = (url) => {
         navigate("/map", { state: url })
     }
@@ -32,7 +32,7 @@ export const  Dashboard=()=> {
     }, [])
 
     useEffect(() => {
-        if (!Token) {
+        if (!isToken) {
 
             onOpen()
         }
@@ -58,6 +58,7 @@ export const  Dashboard=()=> {
 
             </Box>
             <>
+                {/* when user not logged in */}
 
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
